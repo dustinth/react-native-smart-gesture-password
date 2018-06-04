@@ -1,12 +1,11 @@
 import React, {
-    PropTypes,
-    Component,
+    PureComponent
 } from 'react'
 import {
     StyleSheet,
     View,
 } from 'react-native'
-
+import PropTypes from 'prop-types'
 const styles = StyleSheet.create({
     container: {
         position: 'absolute',
@@ -15,7 +14,7 @@ const styles = StyleSheet.create({
 
 //const borderWidth = 1
 
-export default class Circle extends Component {
+export default class Circle extends PureComponent {
 
     static defaultProps = {
         isFill: false,

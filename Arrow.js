@@ -1,12 +1,11 @@
 import React, {
-    PropTypes,
-    Component,
+    PureComponent
 } from 'react'
 import {
     StyleSheet,
     View,
 } from 'react-native'
-
+import PropTypes from 'prop-types'
 import * as Utils from './Utils'
 
 const styles = StyleSheet.create({
@@ -15,7 +14,7 @@ const styles = StyleSheet.create({
     }
 })
 
-export default class Arrow extends Component {
+export default class Arrow extends PureComponent {
 
     static defaultProps = {
         vertexDeg: 90,

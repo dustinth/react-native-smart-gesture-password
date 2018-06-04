@@ -1,15 +1,14 @@
 import React, {
-    PropTypes,
-    Component,
+    PureComponent
 } from 'react'
 import {
     StyleSheet,
     View,
 } from 'react-native'
-
+import PropTypes from 'prop-types'
 import Circle from './Circle'
 
-export default class Point extends Component {
+export default class Point extends PureComponent {
 
     static defaultProps = {
         isActive: false,
