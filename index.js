@@ -45,6 +45,7 @@ export default class GesturePassword extends Component {
         warningDuration: 0,
         isWarning: false,
         showArrow: true,
+        available: true, 
         allowCross: true,
     }
 
@@ -61,6 +62,7 @@ export default class GesturePassword extends Component {
         bottomComponent: PropTypes.element,
         isWarning: PropTypes.bool,
         showArrow: PropTypes.bool,
+        available: PropTypes.bool, 
         allowCross: PropTypes.bool,
         onStart: PropTypes.func,
         onReset: PropTypes.func,
@@ -308,6 +310,11 @@ export default class GesturePassword extends Component {
     _onTouchStart = (e, gestureState) => {
         if (this.props.onStart) {
             this.props.onStart()
+        }
+
+        // if not available stop drawing
+        if (!this.props.available) {
+            return
         }
 
         if (this._timer != null) {

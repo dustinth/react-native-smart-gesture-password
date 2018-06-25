@@ -13,6 +13,7 @@ export interface GesturePasswordProps {
     topComponent?: React.ReactElement<any>,
     bottomComponent?: React.ReactElement<any>,
     isWarning?: boolean,
+    available?: boolean,
     showArrow?: boolean,
     allowCross?: boolean,
     onStart?: () => void,
