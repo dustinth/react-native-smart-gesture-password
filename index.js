@@ -340,6 +340,11 @@ export default class GesturePassword extends Component {
     }
 
     _onTouchMove = (e, gestureState) => {
+        // if not available stop drawing
+        if (!this.props.available) {
+            return
+        }
+
         let location = {
             x: e.nativeEvent.pageX,
             y: e.nativeEvent.pageY,
@@ -414,6 +419,11 @@ export default class GesturePassword extends Component {
     }
 
     _onTouchEnd = (e, gestureState) => {
+        // if not available stop drawing
+        if (!this.props.available) {
+            return
+        }
+        
         if (this._sequence.length == 0) {
             return
         }
