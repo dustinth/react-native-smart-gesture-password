@@ -26,7 +26,8 @@ const borderWidth = 1
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        overflow: 'hidden',
+        paddingTop: 122,
+        overflow: 'hidden'
     }
 })
 
@@ -69,7 +70,7 @@ export default class GesturePassword extends Component {
         onFinish: PropTypes.func,
         warningInnerCircle: PropTypes.string,
         activeInnerCircle: PropTypes.string,
-        defaultInnerCircle: PropTypes.string,
+        defaultInnerCircle: PropTypes.string
     }
 
     // 构造
@@ -183,7 +184,11 @@ export default class GesturePassword extends Component {
                     isActive={point.isActive}
                     isWarning={point.isActive ? this.state.isWarning : false}
                     index={point.index}
-                    position={point.position}/>
+                    position={point.position}
+                    warningInnerCircle={this.props.warningInnerCircle}
+                    activeInnerCircle={this.props.activeInnerCircle}
+                    defaultInnerCircle={this.props.defaultInnerCircle}
+                />
             )
         })
     }
