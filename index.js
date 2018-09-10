@@ -67,6 +67,9 @@ export default class GesturePassword extends Component {
         onStart: PropTypes.func,
         onReset: PropTypes.func,
         onFinish: PropTypes.func,
+        warningInnerCircle: PropTypes.string,
+        activeInnerCircle: PropTypes.string,
+        defaultInnerCircle: PropTypes.string,
     }
 
     // 构造
