@@ -22,6 +22,7 @@ export interface GesturePasswordProps {
     onStart?: () => void,
     onReset?: () => void,
     onFinish?: (password: string) => void,
+    onDraw?: (password:string) => void,
 }
 
 declare class GesturePassword extends React.Component<GesturePasswordProps> { }

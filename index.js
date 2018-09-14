@@ -46,7 +46,7 @@ export default class GesturePassword extends Component {
         warningDuration: 0,
         isWarning: false,
         showArrow: true,
-        available: true, 
+        available: true,
         allowCross: true,
     }
 
@@ -63,11 +63,12 @@ export default class GesturePassword extends Component {
         bottomComponent: PropTypes.element,
         isWarning: PropTypes.bool,
         showArrow: PropTypes.bool,
-        available: PropTypes.bool, 
+        available: PropTypes.bool,
         allowCross: PropTypes.bool,
         onStart: PropTypes.func,
         onReset: PropTypes.func,
         onFinish: PropTypes.func,
+        onDraw: PropTypes.func,
         warningInnerCircle: PropTypes.string,
         activeInnerCircle: PropTypes.string,
         defaultInnerCircle: PropTypes.string
@@ -423,7 +424,10 @@ export default class GesturePassword extends Component {
                 this._currentPoint = point
             }
         }
-
+        let password = Utils.getPassword(this._sequence)
+        if (this.props.onDraw) {
+            this.props.onDraw(password)
+        }
     }
 
     _onTouchEnd = (e, gestureState) => {
@@ -431,7 +435,7 @@ export default class GesturePassword extends Component {
         if (!this.props.available) {
             return
         }
-        
+
         if (this._sequence.length == 0) {
             return
         }
