@@ -1,5 +1,5 @@
 {
-  "name": "react-native-smart-gesture-password",
+  "name": "@treenewbie/react-native-smart-gesture-password",
   "version": "2.2.5",
   "description": "A smart gesture password locker for react-native apps",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/react-native-component/react-native-smart-gesture-password.git"
+    "url": "git+git@github.com:TreeNewbie/react-native-smart-gesture-password.git"
   },
   "keywords": [
     "react-native",
@@ -19,10 +19,10 @@
     "locker",
     "component"
   ],
-  "author": "HISAME SHIZUMARU",
+  "author": "Treenewbie",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/react-native-component/react-native-smart-gesture-password/issues"
+    "url": "https://github.com/TreeNewbie/react-native-smart-gesture-password/issues"
   },
-  "homepage": "https://github.com/react-native-component/react-native-smart-gesture-password#readme"
+  "homepage": "https://github.com/TreeNewbie/react-native-smart-gesture-password#readme"
 }
