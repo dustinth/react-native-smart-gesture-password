@@ -96,8 +96,7 @@ export default class GesturePassword extends Component {
         this._sequence = []
     }
 
-    componentWillMount () {
-
+    componentDidMount () {
         this._panResponder = PanResponder.create({
             onStartShouldSetPanResponder: () => true,
             onMoveShouldSetPanResponder: () => true,
@@ -109,10 +108,10 @@ export default class GesturePassword extends Component {
 
     }
 
-    componentWillReceiveProps (nextProps) {
-        this.setState({
-            isWarning: nextProps.isWarning
-        });
+    static getDerivedStateFromProps(props, state) {
+        return {
+            isWarning: props.isWarning
+        };
     }
 
     render () {
