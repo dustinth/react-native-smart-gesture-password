@@ -94,9 +94,6 @@ export default class GesturePassword extends Component {
         this._currentLine = null
         this._timer = null
         this._sequence = []
-    }
-
-    componentDidMount () {
         this._panResponder = PanResponder.create({
             onStartShouldSetPanResponder: () => true,
             onMoveShouldSetPanResponder: () => true,
@@ -105,7 +102,6 @@ export default class GesturePassword extends Component {
             onPanResponderRelease: this._onTouchEnd,
             onPanResponderTerminationRequest: () => false,
         })
-
     }
 
     static getDerivedStateFromProps(props, state) {
