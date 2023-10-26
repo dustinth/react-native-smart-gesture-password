@@ -31,7 +31,7 @@ export default class Circle extends PureComponent {
             left: PropTypes.number.isRequired,
             top: PropTypes.number.isRequired,
         }).isRequired,
-
+        testID: PropTypes.string
     }
 
     // 构造
@@ -63,7 +63,9 @@ export default class Circle extends PureComponent {
             left: this.props.position.left,
             top: this.props.position.top,
             }
-        ]}>
+        ]}
+        testID={this.props.testID}
+        >
                 {this.props.children}
             </View>
         )

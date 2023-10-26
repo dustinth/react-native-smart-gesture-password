@@ -32,6 +32,7 @@ export default class Point extends PureComponent {
         activeInnerCircle:PropTypes.string,
         defaultInnerCircle:PropTypes.string,
         warningInnerCircle:PropTypes.string,
+        testID:PropTypes.string,
     }
 
     // 构造
@@ -61,7 +62,9 @@ export default class Point extends PureComponent {
                 color={this._color}
                 radius={this.props.radius}
                 borderWidth={this.props.borderWidth}
-                position={this._outerCirclePosition}>
+                position={this._outerCirclePosition}
+                testID={this.props.testID}
+            >
                 { (this.props.isActive || this.props.isWarning) ? (
                   <Circle
                     isFill={true}

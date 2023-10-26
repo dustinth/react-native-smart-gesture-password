@@ -171,6 +171,7 @@ export default class GesturePassword extends Component {
             return (
                 <Point
                     key={'point-' + index}
+                    testID={'point-' + index}
                     radius={this._pointRadius}
                     borderWidth={borderWidth}
                     backgroundColor={this.props.pointBackgroundColor}
